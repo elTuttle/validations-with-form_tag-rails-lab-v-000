@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   def update
     temp_post = Post.new(post_params)
     @post = set_post!
+    binding.pry
     if temp_post.valid?
       @post.update(post_params)
       redirect_to post_path(@post)
