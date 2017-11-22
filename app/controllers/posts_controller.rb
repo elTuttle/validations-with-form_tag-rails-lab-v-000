@@ -9,6 +9,9 @@ class PostsController < ApplicationController
 
   def update
     @post = set_post!
+    @post.title = params[:title]
+    @post.content = params[:content]
+    @post.category = params[:category]
     #inding.pry
     if @post.valid?
       @post.update(post_params)
