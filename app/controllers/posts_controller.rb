@@ -8,7 +8,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    temp_post = Post.new(post_params)
     @post = set_post!
     #inding.pry
     if temp_post.valid?
